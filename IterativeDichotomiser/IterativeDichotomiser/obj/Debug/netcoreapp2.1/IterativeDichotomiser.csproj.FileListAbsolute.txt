@@ -1,0 +1,11 @@
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\bin\Debug\netcoreapp2.1\IterativeDichotomiser.deps.json
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\bin\Debug\netcoreapp2.1\IterativeDichotomiser.runtimeconfig.json
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\bin\Debug\netcoreapp2.1\IterativeDichotomiser.runtimeconfig.dev.json
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\bin\Debug\netcoreapp2.1\IterativeDichotomiser.dll
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\bin\Debug\netcoreapp2.1\IterativeDichotomiser.pdb
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\obj\Debug\netcoreapp2.1\IterativeDichotomiser.csprojAssemblyReference.cache
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\obj\Debug\netcoreapp2.1\IterativeDichotomiser.csproj.CoreCompileInputs.cache
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\obj\Debug\netcoreapp2.1\IterativeDichotomiser.AssemblyInfoInputs.cache
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\obj\Debug\netcoreapp2.1\IterativeDichotomiser.AssemblyInfo.cs
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\obj\Debug\netcoreapp2.1\IterativeDichotomiser.dll
+C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\IterativeDichotomiser\IterativeDichotomiser\obj\Debug\netcoreapp2.1\IterativeDichotomiser.pdb
