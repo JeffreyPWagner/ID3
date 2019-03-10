@@ -17,7 +17,6 @@ namespace IterativeDichotomiser {
         int exampleCount = 0;
 
         public void readFile() {
-
             StreamReader sr = new StreamReader(@"C:\Users\jeffp\OneDrive\Documents\GitHub\CIS_678_Project3\fishing.txt.txt");
             string line;
             while ((line = sr.ReadLine()) != null) {
@@ -52,6 +51,7 @@ namespace IterativeDichotomiser {
                 }
                 ++lineCount;
             }
+            Console.WriteLine(numAttributes);
         }
     }
 }
