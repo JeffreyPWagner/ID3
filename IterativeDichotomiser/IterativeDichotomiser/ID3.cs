@@ -84,6 +84,8 @@ namespace IterativeDichotomiser {
                 }
                 l.Remove(target);
                 foreach (string attrVal in l) {
+                    //Console.WriteLine(target);
+                   // Console.WriteLine(attrVal);
                     if (attributeCounts[target][attributes[valIndex]].ContainsKey(attrVal)) {
                         attributeCounts[target][attributes[valIndex]][attrVal]++;
                     }
@@ -92,6 +94,7 @@ namespace IterativeDichotomiser {
                     }
                     ++valIndex;
                 }
+                l.Add(target);
             }
             foreach (KeyValuePair<String, int> entry in targetCounts) {
                 setEntropy -= (entry.Value / totalExamples) * Math.Log((entry.Value / totalExamples), 2.0);
@@ -125,39 +128,49 @@ namespace IterativeDichotomiser {
             TreeNode result;
             bool allSameClass = true;
             bool noAttributesLeft = true;
-            string maxInfoAttribute;
             for (int i = 1; i < examples.Count; i++) {
                 List<string> currentEx = examples[i];
                 List<string> previousEx = examples[i - 1];
                 if (currentEx[currentEx.Count - 1] != previousEx[previousEx.Count - 1]) {
                     allSameClass = false;
                 }
+                string previousTarget = previousEx[previousEx.Count - 1];
+                string currentTarget = currentEx[currentEx.Count - 1];
                 previousEx.RemoveAt(previousEx.Count - 1);
                 currentEx.RemoveAt(currentEx.Count - 1);
                 if (!currentEx.SequenceEqual(previousEx)) {
                     noAttributesLeft = false;
                 }
+                examples[i - 1].Add(previousTarget);
+                examples[i].Add(currentTarget);
+                //Console.WriteLine(i);
             }
+
+            //Console.WriteLine(allSameClass);
+            //Console.WriteLine(noAttributesLeft);
             if (allSameClass) {
                 result = new TreeNode(examples[0][examples[0].Count - 1], null);
             }
             if (noAttributesLeft) {
                 result = new TreeNode(mostCommonTarget(examples), null);
             }
-            maxInfoAttribute = findMaxInfoGain(examples);
+            string maxInfoAttribute = findMaxInfoGain(examples);
+            //Console.WriteLine(examples[0][examples[0].Count - 1]);
+
+            Console.WriteLine(maxInfoAttribute);
             result = new TreeNode(maxInfoAttribute, examples);
             foreach (string attrVal in attributeValues[maxInfoAttribute]) {
+               // Console.WriteLine(attrVal);
                 List<List<String>> subExamples = new List<List<string>>();
                 foreach (List<String> l in examples) {
+                    //Console.WriteLine(l[l.Count-1]);
                     if (l[attributes.IndexOf(maxInfoAttribute)] == attrVal) {
                         subExamples.Add(l);
                     }
                 }
-                result.addChild(new TreeNode(findMaxInfoGain(subExamples), subExamples));
+                generateDecisionTree(subExamples);
             }
-            foreach (TreeNode child in result.children) {
-                generateDecisionTree(child.examples);
-            }
+            
             return result;
         }
 
