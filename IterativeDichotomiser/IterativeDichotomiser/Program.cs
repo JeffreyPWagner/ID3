@@ -71,8 +71,13 @@ namespace IterativeDichotomiser {
 
             // calculate and print the percentage of examples correctly classified
             correctPercent = correctCount / (double)testID3.examples.Count * 100;
-            Console.Write("Percentage of test examples correctly classified: ");
+            Console.Write("Percentage of car test examples correctly classified: ");
             Console.WriteLine(correctPercent);
+            Console.WriteLine();
+
+            // print the car decision tree
+            Console.WriteLine("Car Decision Tree: ");
+            trainingID3.printTree(carDecisionTree, 0);
         }
     }
 }

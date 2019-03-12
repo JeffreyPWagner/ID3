@@ -113,8 +113,7 @@ namespace IterativeDichotomiser {
             Dictionary<string, int> targetCounts = new Dictionary<string, int>();
 
             // the counts of each attribute value in the examples
-            Dictionary<string, Dictionary<string, Dictionary<string, int>>> attributeCounts =
-                new Dictionary<string, Dictionary<string, Dictionary<string, int>>>();
+            Dictionary<string, Dictionary<string, Dictionary<string, int>>> attributeCounts = new Dictionary<string, Dictionary<string, Dictionary<string, int>>>();
 
             // the total number of examples
             double totalExamples = examples.Count;
